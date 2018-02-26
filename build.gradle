@@ -5,10 +5,12 @@ buildscript {
     repositories {
         google()
         jcenter()
+        mavenCentral()
+        maven { url "https://www.jitpack.io" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.0'
-
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -18,6 +20,8 @@ allprojects {
     repositories {
         google()
         jcenter()
+        mavenCentral()
+        maven { url "https://www.jitpack.io" }
     }
 }
 
@@ -30,8 +34,9 @@ ext {
     versionCode = 1;
     //版本名称
     versionName = '1.0.0';
-
     //依赖库的版本
     supportVersion = '26.1.0';
+    //butterknife依赖版本
+    butterknifeVersion = '8.4.0';
 
 }
