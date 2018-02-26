@@ -1,13 +1,28 @@
 package imchat.david.com.imchat;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.BindView;
+import im.mvp.david.com.common.app.BaseActivity;
+
+public class MainActivity extends BaseActivity {
+
+    @BindView(R.id.txt_test)
+    TextView txt_test;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int getContentLayoutID() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initWeight() {
+        super.initWeight();
+    }
+
+    @Override
+    protected void initData() {
+        super.initData();
+        txt_test.setText("哈哈成功了");
     }
 }

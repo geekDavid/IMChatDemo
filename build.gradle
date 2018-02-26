@@ -10,7 +10,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.0'
-        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -37,6 +37,6 @@ ext {
     //依赖库的版本
     supportVersion = '26.1.0';
     //butterknife依赖版本
-    butterknifeVersion = '8.4.0';
+    butterknifeVersion = '8.5.1';
 
 }
