@@ -1,4 +1,4 @@
-package im.mvp.david.com.common.widget;
+package im.mvp.david.com.common.widget.recycler;
 
 /**
  * @author David

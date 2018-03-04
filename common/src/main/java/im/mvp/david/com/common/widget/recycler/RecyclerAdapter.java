@@ -1,4 +1,4 @@
-package im.mvp.david.com.common.widget;
+package im.mvp.david.com.common.widget.recycler;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
