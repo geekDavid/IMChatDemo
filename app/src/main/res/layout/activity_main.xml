@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,7 +14,8 @@
         android:layout_height="@dimen/actionBarWithStatusBarSize"
         android:elevation="@dimen/len_2"
         android:outlineProvider="bounds"
-        app:elevation="@dimen/len_2">
+        apps:elevation="@dimen/len_2"
+        tools:targetApi="lollipop">
 
         <FrameLayout
             android:id="@+id/appbar_fl"
@@ -65,8 +66,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="@dimen/len_52"
-        android:background=""
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        apps:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
 
     <net.qiujuer.genius.ui.widget.FloatActionButton
         android:id="@+id/floatBtn"
@@ -77,9 +78,9 @@
         android:padding="@dimen/len_20"
         android:src="@drawable/ic_group_add"
         android:tint="@color/white"
-        app:gBackgroundColor="@color/colorAccent"
-        app:layout_anchor="@+id/fl_content"
-        app:layout_anchorGravity="bottom|end"
+        apps:gBackgroundColor="@color/colorAccent"
+        apps:layout_anchor="@id/fl_content"
+        apps:layout_anchorGravity="bottom|end"
         tools:ignore="RtlCompat"/>
 
     <android.support.design.widget.BottomNavigationView
@@ -87,10 +88,14 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/len_52"
         android:layout_gravity="bottom"
-        android:background="@color/colorAccent"
+        android:background="@color/white"
         android:elevation="@dimen/len_4"
-        app:itemIconTint="@color/text_nav"
-        app:itemTextColor="@color/text_nav">
+        android:outlineProvider="bounds"
+        android:translationZ="@dimen/len_8"
+        apps:itemIconTint="@color/text_nav"
+        apps:itemTextColor="@color/text_nav"
+        apps:menu="@menu/navigation_menu"
+        tools:targetApi="lollipop">
 
     </android.support.design.widget.BottomNavigationView>
 

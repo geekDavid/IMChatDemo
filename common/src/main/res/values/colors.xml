@@ -4,10 +4,10 @@
     <color name="colorPrimary">#31373d</color>
     <color name="colorPrimaryDark">#31373d</color>
     <color name="colorAccent">#1572fc</color>
+    <!--<color name="colorAccent">#3fe2dd</color>-->
     <color name="colorLight">@color/white</color>
     <color name="colorDark">@color/black</color>
     <color name="colorAccentAlpha">#801572fc</color>
-
 
 
     <!--背景色-->

@@ -4,4 +4,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_launch">LaunchActivity</string>
+
+    <string name="action_home">消息</string>
+    <string name="action_group">群组</string>
+    <string name="action_contact">好友</string>
+
+
 </resources>

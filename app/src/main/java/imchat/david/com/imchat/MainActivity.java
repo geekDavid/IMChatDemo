@@ -1,7 +1,9 @@
 package imchat.david.com.imchat;
 
+import android.support.annotation.NonNull;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.BottomNavigationView;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -18,8 +20,9 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import im.mvp.david.com.common.app.BaseActivity;
 import im.mvp.david.com.common.widget.view.PicassoView;
+import imchat.david.com.imchat.helper.BottomMenuHelper;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
 
     @BindView(R.id.pv_icon)
@@ -39,6 +42,8 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.btmnv_menu)
     BottomNavigationView mBtmnvMenu;
 
+    private BottomMenuHelper mBottomMenuHelper;
+
     @Override
     protected int getContentLayoutID() {
         return R.layout.activity_main;
@@ -47,6 +52,8 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initWeight() {
         super.initWeight();
+
+        mBtmnvMenu.setOnNavigationItemSelectedListener(this);
         Glide.with(this)
                 .load(R.drawable.bg_src_morning)
                 .centerCrop()
@@ -71,5 +78,10 @@ public class MainActivity extends BaseActivity {
             case R.id.floatBtn:
                 break;
         }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        return mBottomMenuHelper.profromClickMenu(item.getItemId());
     }
 }
